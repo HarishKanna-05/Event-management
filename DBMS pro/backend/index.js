@@ -1,6 +1,8 @@
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import { Event } from "./models/EventSchema.js";
+dotenv.config();
 const app = express();
 const PORT = 5000;
 app.use(express.json());
@@ -44,9 +46,7 @@ app.get("/getEvents", async (req, res) => {
 });
 app.listen(PORT, async () => {
   await mongoose
-    .connect(
-      "mongodb+srv://dhaya123:Dhaya%40123@cluster0.amircbx.mongodb.net/;"
-    )
+    .connect("mongodb+srv://dhaya123:Dhaya%40123@cluster0.amircbx.mongodb.net/")
     .then(() => {
       console.log(`Server is running on port ${PORT}`);
       console.log("connected to database!");
