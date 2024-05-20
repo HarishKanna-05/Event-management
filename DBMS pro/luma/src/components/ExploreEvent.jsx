@@ -74,7 +74,7 @@ const ExploreEvent = () => {
         <h1 className="text-4xl font-impact pt-4">THIS WEEK</h1>
       </div>
       {/*grid columns */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 z-10 md:grid-cols-4  pt-10 w-4/5 mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 z-10 md:grid-cols-4  pt-10  px-5 md:w-4/5 w-full mx-auto">
         {clubs.map((club) => (
           <Link to={club.link}>
             <div className="flex p-3 gap-3 transform transition-transform duration-200 ease-out hover:scale-110 hover:ease-in-out">
