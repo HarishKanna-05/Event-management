@@ -1,0 +1,33 @@
+import mongoose from "mongoose";
+const eventSchema = new mongoose.Schema(
+  {
+    eventName: {
+      type: String,
+      required: true,
+    },
+    conductBy: {
+      type: String,
+      required: true,
+    },
+    eventDate: {
+      type: Date,
+      required: true,
+    },
+    eventTime: {
+      type: String,
+      required: true,
+    },
+    venue: {
+      type: String,
+      required: true,
+    },
+    eventLink: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+export const Event = mongoose.model("Event", eventSchema);
