@@ -20,13 +20,15 @@ const Home = () => {
               <h1 className="text-8xl bg-gradient-to-t from-[#CCCCCC] to-white font-impact text-transparent bg-clip-text  m-1 md:m-2">
                 FOR THE EVENTS
               </h1>
-              <h1 className="text-8xl bg-gradient-to-t from-[#999999] to-[#CCCCCC] font-impact text-transparent bg-clip-text  m-1 md:m-2">THAT</h1>
-            </div> 
+              <h1 className="text-8xl bg-gradient-to-t from-[#999999] to-[#CCCCCC] font-impact text-transparent bg-clip-text  m-1 md:m-2">
+                THAT
+              </h1>
+            </div>
             <div className="text-8xl font-impact text-transparent  bg-gradient-to-r from-[#231FFF] to-[#FF0E0E] bg-clip-text m-1 md:m-2">
               CHANGE YOU
             </div>
           </div>
-          
+
           <Link to="/Create" className="">
             <button className="m-2 text-2xl font-extrabold tracking-tight bg-white p-4 rounded-md text-black hover:bg-black hover:text-white hover:outline">
               CREATE EVENTS
@@ -42,7 +44,7 @@ const Home = () => {
           <img
             src=".././src/assets/Images/spiral.png"
             alt="event"
-            className=""
+            className="w-[600px]"
           />
         </div>
       </div>
