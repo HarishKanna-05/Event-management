@@ -75,7 +75,7 @@ const ExploreEvent = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 z-10 md:grid-cols-4  pt-10 w-4/5 mx-auto">
         {clubs.map((club) => (
           <Link to={club.link}>
-            <div className="flex p-3 gap-3">
+            <div className="flex p-3 gap-3 transform transition-transform duration-200 ease-out hover:scale-110 hover:ease-in-out">
               <div className="flex justify-center items-center bg-white w-[100px] h-[100px] rounded-full">
                 <img className="w-[60px]" src={club.icon} alt="" />
               </div>
