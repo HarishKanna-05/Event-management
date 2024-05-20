@@ -5,6 +5,9 @@
 *{
   background-color: black;
 }
+.main{
+  @apply transform transition-transform duration-200 ease-out hover:scale-110 hover:ease-in-out;
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

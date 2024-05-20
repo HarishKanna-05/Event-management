@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const clubs = [
   {
@@ -64,9 +65,10 @@ const ExploreEvent = () => {
   // const num = 5;
   return (
     <div className="text-white">
-      <div className=" m-2 ">
+      {/* <div className=" m-2 ">
         <h1 className="text-white text-4xl font-impact ml-3 p-5">DHENT</h1>
-      </div>
+      </div> */}
+      <Header />
       <div className=" px-28 md:px-48">
         <h1 className="text-6xl font-impact pb-12">EXPLORE EVENTS</h1>
         <h1 className="text-4xl font-impact pt-4">THIS WEEK</h1>

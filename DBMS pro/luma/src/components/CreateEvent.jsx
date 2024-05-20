@@ -1,13 +1,13 @@
 import React from "react";
-// import Header from "./Header";
+import Header from "./Header";
 
 const CreateEvent = () => {
   return (
     <>
-      {/* <Header /> */}
-      <div className="m-2 ">
+      <Header />
+      {/* <div className="m-2 ">
         <h1 className="text-white text-4xl font-impact ml-3 p-5 pt-2">DHENT</h1>
-      </div>
+      </div> */}
       <div className="flex justify-center">
         <div className="ml-36">
           <div className="text-white z-10 text-6xl font-impact">
