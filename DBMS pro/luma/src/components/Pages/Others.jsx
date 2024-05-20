@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../Header";
 
 const events = [
   {
@@ -30,16 +31,17 @@ const events = [
 function Others() {
   return (
     <div className="text-white">
-      <div className=" m-2 ">
+      {/* <div className=" m-2 ">
         <h1 className="text-white text-4xl font-impact ml-3 p-5">DHENT</h1>
-      </div>
+      </div> */}
+      <Header />
       <div className="">
         <div className="px-28 py-3 md:px-48">
           <h1 className="text-6xl font-impact">OTHER EVENTS</h1>
         </div>
         <div className="grid grid-cols-3 z-10 md:grid-cols-4  pt-10 w-4/5 mx-auto">
           {events.map((eve) => (
-            <div className="flex flex-col w-[250px] p-5 bg-gray-300 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 uppercase">
+            <div className="main flex flex-col w-[250px] p-5 bg-gray-300 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 uppercase">
               <img className="h-[140px] rounded-lg" src={eve.img} alt="" />
               <div className="px-1 bg-transparent">
                 <h1 className="text-xl py-2 text-center font-bold  bg-transparent">
@@ -62,7 +64,7 @@ function Others() {
           ))}
         </div>
       </div>
-      <div className=" absolute bottom-0 right-0">
+      <div className="fixed bottom-0 right-0 -z-50">
         <img
           className="w-[700px] h-[200px] "
           src="../../src/assets/Images/bubble.png"

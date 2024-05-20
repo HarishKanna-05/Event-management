@@ -121,7 +121,7 @@ const CreateEvent = () => {
             </div>
           </form>
         </div>
-        <div className="z-0 -ml-[190px]">
+        <div className="-ml-[190px]">
           <img
             className=" z-0  mt-[50px] w-[600px]"
             src="../../src/assets/Images/pie.png"

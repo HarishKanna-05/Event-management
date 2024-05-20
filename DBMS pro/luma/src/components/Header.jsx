@@ -26,7 +26,7 @@ const Header = () => {
           viewBox="0 0 20 20"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-white text-3xl"
+          className="w-6 h-6 text-white text-3xl cursor-pointer"
           onClick={() => setMenu(!menu)}
         >
           <path

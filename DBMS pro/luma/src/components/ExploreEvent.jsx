@@ -89,9 +89,9 @@ const ExploreEvent = () => {
           </Link>
         ))}
       </div>
-      <div className="absolute bottom-0 right-0 ">
+      <div className="fixed bottom-0 right-0 -z-50 ">
         <img
-          className=" hidden md:block w-[400px]"
+          className=" hidden md:block w-[450px]"
           src="../../src/assets/Images/circle.png"
           alt=""
         />
