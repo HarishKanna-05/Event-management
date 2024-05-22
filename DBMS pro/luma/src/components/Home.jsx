@@ -29,7 +29,7 @@ const Home = () => {
             </div>
           </div>
 
-          <Link to="/Create" className="">
+          <Link to="/event/create" className="">
             <button className="m-2 text-2xl font-extrabold tracking-tight bg-white p-4 rounded-md text-black hover:bg-black hover:text-white hover:outline">
               CREATE EVENTS
             </button>

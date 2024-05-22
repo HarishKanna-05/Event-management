@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [isSignIn, setIsSignIn] = useState(false);
   const handleMenu = () => {
@@ -10,23 +11,34 @@ const Header = () => {
       <div className="flex-1 m-2 ">
         <h1 className="text-white text-4xl font-impact ml-3 p-5">DHENT</h1>
       </div>
-      <div className="p-6 m-3">
-        {/* <nav>
-          <Link className="font-extrabold text-lg  btn-grad bg-gradient-to-r from-gray-300  to-gray-500 hover:from-gray-700 hover:to-gray-500 hover:text-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 py-3 px-5 uppercase  rounded-xl shadow-md">
-            {isSignIn ? (
-              <button onClick={handleMenu}>SIGN IN</button>
-            ) : (
-              <button onClick={handleMenu}>SIGN OUT</button>
-            )}
+      <div className="flex justify-evenly z-50 p-6 m-3">
+        <nav className="hidden md:block">
+          <Link
+            to="/"
+            className="mx-2 font-extrabold text-lg  btn-grad bg-gradient-to-r from-gray-300  to-gray-500 hover:from-gray-700 hover:to-gray-500 hover:text-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 py-3 px-5 uppercase  rounded-xl shadow-md"
+          >
+            <button>Home</button>
           </Link>
-        </nav> */}
+          <Link
+            to="/event/create"
+            className="mx-2 font-extrabold text-lg  btn-grad bg-gradient-to-r from-gray-300  to-gray-500 hover:from-gray-700 hover:to-gray-500 hover:text-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 py-3 px-5 uppercase  rounded-xl shadow-md"
+          >
+            <button>Create</button>
+          </Link>
+          <Link
+            to="/explore"
+            className="mx-2 font-extrabold text-lg  btn-grad bg-gradient-to-r from-gray-300  to-gray-500 hover:from-gray-700 hover:to-gray-500 hover:text-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 py-3 px-5 uppercase  rounded-xl shadow-md"
+          >
+            <button>Explore</button>
+          </Link>
+        </nav>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 20 20"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-white text-3xl cursor-pointer"
+          className="block md:hidden  mx-2 w-6 h-6 text-white text-3xl cursor-pointer"
           onClick={() => setMenu(!menu)}
         >
           <path
@@ -37,7 +49,9 @@ const Header = () => {
         </svg>
       </div>
       {menu && (
-        <div className="absolute top-16 right-10  border-2 mt-6 p-4  rounded-lg shadow-lg">
+        <div
+          className={`absolute top-16 right-10 md:hidden border-2 mt-6 p-4  rounded-lg shadow-lg`}
+        >
           <ul className="">
             <li className="p-4 main">
               <a href="/" className="text-white ">

@@ -5,6 +5,9 @@
 *{
   background-color: black;
 }
+body {
+  text-size-adjust: 100%; /* Adjust as needed */
+}
 .main{
   @apply transform transition-transform duration-200 ease-out hover:scale-110 hover:ease-in-out;
 }
