@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
@@ -11,6 +10,32 @@ const CreateEvent = () => {
   const [venue, setVenue] = useState("");
   const [link, setLink] = useState("");
   const navigate = useNavigate();
+  const checkAvailability = (e) => {
+    e.preventDefault();
+    const data = {
+      eventTime,
+      venue,
+      eventDate,
+    };
+    console.log(data);
+    fetch("http://localhost:5000/event/check", {
+      method: "POST", // Specify the method
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data), // Convert the data to JSON string
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        alert(data.message); // Access the message property of the response data
+      })
+      .catch((error) => {
+        console.log(err);
+        alert(err.message);
+      });
+  };
   const handleEvent = (e) => {
     e.preventDefault();
     const data = {
@@ -22,28 +47,29 @@ const CreateEvent = () => {
       link,
     };
     console.log(data);
-    axios
-      .post("http://localhost:5000/event", data)
-      .then((res) => {
-        console.log(res);
+    // axios
+    //   .post("http://localhost:5000/event", data)
+    //   .then((res) => {
+    //     console.log(res);
+    //     alert("Event created successfully");
+    //     navigate("/");
+    //   })
+    fetch("http://localhost:5000/event", {
+      method: "POST", // Specify the method
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data), // Convert the data to JSON string
+    })
+      .then(() => {
         alert("Event created successfully");
         navigate("/");
       })
       .catch((error) => {
-        if (error.response) {
-          console.log(error.response.data);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.log(error.request);
-        } else {
-          console.log(err);
-          alert("Error in creating event");
-        }
+        console.log(err);
+        alert(err.message);
       });
   };
-
   return (
     <>
       <Header />
@@ -91,7 +117,7 @@ const CreateEvent = () => {
                   onChange={(e) => {
                     setConductBy(e.target.value);
                   }}
-                  className="mt-1 block  rounded-md text-lg pl-2  border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent "
+                  className="mt-1 block uppercase rounded-md text-lg pl-2  border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent "
                   placeholder="Conduct By"
                   required
                 />
@@ -171,6 +197,7 @@ const CreateEvent = () => {
             <div className="flex justify-end space-x-6 bg-transparent ">
               <button
                 type="reset"
+                onClick={checkAvailability}
                 className="inline-flex uppercase justify-center py-2 px-4 border border-transparent shadow-gray-300 shadow-md text-sm font-bold rounded-md text-black bg-white hover:bg-black hover:text-white hover:outline "
               >
                 Check Availablity

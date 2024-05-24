@@ -21,7 +21,7 @@ const eventSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    eventLink: {
+    link: {
       type: String,
       required: true,
     },

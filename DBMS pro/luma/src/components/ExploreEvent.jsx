@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import img1 from "../assets/Images/1.jpeg";
 import Header from "./Header";
-
 const clubs = [
   {
     id: 1,
@@ -32,11 +32,11 @@ const clubs = [
     no: 2,
   },
   {
-    id: 5,
-    link: "/rotaract",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYStOj4J1qrVVVRDIsFVcUZ3C93XgjWactypX1D_c3Q&s",
-    name: "ROTARACT",
-    no: 3,
+    id: 9,
+    link: "/elite",
+    icon: img1,
+    name: "ELITE",
+    no: 7,
   },
   {
     id: 6,
@@ -74,9 +74,9 @@ const ExploreEvent = () => {
         <h1 className="text-4xl font-impact pt-4">THIS WEEK</h1>
       </div>
       {/*grid columns */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 z-10 md:grid-cols-4  pt-10  px-5 md:w-4/5 w-full mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 z-10 md:grid-cols-4  pt-10  px-5 md:w-4/5 w-full mx-auto bg-transparent">
         {clubs.map((club) => (
-          <Link to={club.link}>
+          <Link key={club.id} to={club.link}>
             <div className="flex p-3 gap-3 transform transition-transform duration-200 ease-out hover:scale-110 hover:ease-in-out">
               <div className="flex justify-center items-center bg-white w-[100px] h-[100px] rounded-full">
                 <img className="w-[60px]" src={club.icon} alt="" />
