@@ -115,11 +115,17 @@ route.delete("/:id", async (req, res) => {
 route.post("/check", async (req, res) => {
   const { venue, eventTime, eventDate } = req.body;
   try {
-    const event = await Event.find({
-      venue: venue,
-      eventTime: eventTime,
-      eventDate: eventDate,
-    });
+    const event = await Event.find(
+      {
+        venue: venue,
+      },
+      {
+        eventTime: new Date(eventTime),
+      },
+      {
+        eventDate: new Date(eventDate),
+      }
+    );
     if (event.length > 0) {
       return res.status(404).json({ message: "Venue is not  available" });
     } else {

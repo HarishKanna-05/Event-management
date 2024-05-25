@@ -56,11 +56,11 @@ const Header = () => {
       </div>
       {menu && (
         <div
-          className={`absolute top-16 right-10 md:hidden border-2 mt-6 p-4  rounded-lg shadow-lg`}
+          className={`absolute top-16 z-50 bg-gray-400 right-10 md:hidden border-2 mt-6 p-4  rounded-lg shadow-lg`}
         >
           <ul className="">
             <li className="p-4 main">
-              <a href="/" className="text-white ">
+              <a href="/" className="text-white">
                 Home
               </a>
             </li>
