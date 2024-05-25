@@ -89,7 +89,7 @@ const CreateEvent = () => {
               <div className="flex gap-4 items-center  py-2 bg-transparent ">
                 <label
                   htmlFor="eventName"
-                  className="block tracking-tight font-bold text-2xl  text-white bg-transparent "
+                  className="block tracking-tight font-bold text-2xl  text-white bg-transparent  "
                 >
                   Event Name :
                 </label>
@@ -99,7 +99,7 @@ const CreateEvent = () => {
                   onChange={(e) => {
                     setEventName(e.target.value);
                   }}
-                  className="mt-2 block text-lg pl-2 rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent "
+                  className="mt-2 block text-lg pl-2 rounded-md border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent uppercase"
                   placeholder="Event Name"
                   required
                 />

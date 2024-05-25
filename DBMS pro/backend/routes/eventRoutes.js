@@ -5,7 +5,6 @@ const route = express.Router();
 //for creating the event
 route.post("/", async (req, res) => {
   try {
-    console.log(req.body);
     if (
       !req.body.eventName ||
       !req.body.conductBy ||
@@ -113,8 +112,12 @@ route.delete("/:id", async (req, res) => {
 //for checking the availability of the venue
 
 route.post("/check", async (req, res) => {
-  const { venue, eventTime, eventDate } = req.body;
   try {
+    if (!req.body.venue || !req.body.eventTime || !req.body.eventDate) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+    return res.status(400).json({ message: "All fields are required" });
+    const { venue, eventTime, eventDate } = req.body;
     const event = await Event.find(
       {
         venue: venue,
