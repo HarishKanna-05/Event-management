@@ -17,14 +17,16 @@ route.post("/", async (req, res) => {
     }
     const { eventName, conductBy, eventDate, eventTime, venue, link } =
       req.body;
+
     const event = new Event({
       eventName,
       conductBy,
-      eventDate: new Date(eventDate),
-      eventTime: new Date(eventTime),
+      eventDate,
+      eventTime,
       venue,
       link,
     });
+    console.log(event);
     await event.save();
     return res.status(200).json({ message: "Event Created Sucesssfully" });
   } catch (err) {

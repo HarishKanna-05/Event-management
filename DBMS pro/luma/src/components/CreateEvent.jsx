@@ -117,7 +117,7 @@ const CreateEvent = () => {
                   onChange={(e) => {
                     setConductBy(e.target.value);
                   }}
-                  className="mt-1 block uppercase rounded-md text-lg pl-2  border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent "
+                  className="mt-1 block rounded-md text-lg pl-2  border-gray-300 shadow-sm text-white focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent uppercase"
                   placeholder="Conduct By"
                   required
                 />

@@ -44,7 +44,7 @@ const Home = () => {
           <img
             src=".././src/assets/Images/spiral.png"
             alt="event"
-            className="w-[600px]"
+            className="w-[500px]"
           />
         </div>
       </div>

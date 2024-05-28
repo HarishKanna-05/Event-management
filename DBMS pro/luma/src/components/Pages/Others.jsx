@@ -37,6 +37,8 @@ const Mappictures = {
     "https://img.freepik.com/free-photo/glowing-circuit-board-complex-technology-inside-modern-computer-generated-by-ai_188544-31085.jpg",
   "BOT-A-THON":
     "https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329548.jpg",
+  "CLOUD COMPUTING":
+    "https://th.bing.com/th/id/OIP.5KIbRxwaOVyrPQ-lK7qpfQHaE7?rs=1&pid=ImgDetMain",
 };
 function Others() {
   const [event, setEvent] = useState([]);
@@ -89,9 +91,9 @@ function Others() {
                 <h1 className="text-xl py-2 text-center font-bold  bg-transparent">
                   {eve.eventName}
                 </h1>
-                {/* <h1 className="text-md pb-1  font-semibold bg-transparent">
+                <h1 className="text-md pb-1  font-semibold bg-transparent">
                   date : {eve.eventDate}
-                </h1> */}
+                </h1>
                 <h1 className="text-md pb-1 font-semibold bg-transparent">
                   timing : {eve.eventTime}
                 </h1>
@@ -123,5 +125,4 @@ function Others() {
     </div>
   );
 }
-
 export default Others;
